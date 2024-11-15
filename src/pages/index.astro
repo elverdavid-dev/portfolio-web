@@ -1,30 +1,22 @@
 ---
-import AboutMe from "@/components/about-me.astro";
-import Hero from "@/components/new/hero.astro";
-import Spotlight from "@/components/new/spotlight.astro";
+import AboutMe from "@/components/about-me/about-me.astro";
+import Hero from "@/components/hero/hero.astro";
+import Spotlight from "@/components/layout/spotlight.astro";
 import Projects from "@/components/projects/projects.astro";
-import Technologies from "@/components/technologies.astro";
 import Layout from "@/layouts/Layout.astro";
-import Button from "@/components/new/button.astro";
 ---
 
-<Layout
-	title="Portafolio de Elver David Peñate | Desarrollador web con 2 años de experiencia"
->
+<Layout>
 	<section
 		class="h-[40rem] w-full rounded-md antialiased bg-grid-white/[0.02] relative overflow-hidden"
 	>
 		<Spotlight class="-top-40 left-0 md:left-40 md:-top-10" />
 		<Spotlight class="h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
-
 		<Hero />
 	</section>
-	<div class="px-2 mx-auto md:px-0 md:max-w-6xl">
+
+	<section class="px-2 mx-auto md:px-0 md:max-w-6xl">
 		<AboutMe />
 		<Projects />
-		<Technologies />
-	</div>
-	<div class="flex items-center justify-center py-36">
-		<Button>Contactame</Button>
-	</div>
+	</section>
 </Layout>

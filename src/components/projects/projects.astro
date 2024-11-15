@@ -5,7 +5,7 @@ import Link from "@/assets/icons/link.astro";
 import Subtitle from "@/components/common/subtitle.astro";
 import { ProjectData } from "@/services/projects";
 import Tags from "@/components/projects/tags.astro";
-import MagicButton from "../new/magic-button.astro";
+import LinkButton from "./link-button.astro";
 ---
 
 <section class="mt-36" id="projects">
@@ -33,24 +33,16 @@ import MagicButton from "../new/magic-button.astro";
             <Tags stack={project.stack ?? []} />
             <footer class="flex items-end justify-start mt-4 gap-x-2">
               {project.urlGithub && (
-                <MagicButton
-                  href={project.urlGithub}
-                  variants="light"
-                  class="text-lg"
-                >
+                <LinkButton href={project.urlGithub}>
                   <Github class="size-4" />
                   Ver Codigo
-                </MagicButton>
+                </LinkButton>
               )}
               {project.urlWeb && (
-                <MagicButton
-                  href={project.urlWeb}
-                  variants="bordered"
-                  class="text-lg"
-                >
+                <LinkButton href={project.urlWeb} bordered>
                   <Link class="size-4" />
                   Ver Pagina
-                </MagicButton>
+                </LinkButton>
               )}
             </footer>
           </div>

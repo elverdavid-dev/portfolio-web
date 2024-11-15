@@ -3,11 +3,11 @@ import User from "@/assets/icons/user.astro";
 import Coffe from "@/assets/icons/coffe.astro";
 import Book from "@/assets/icons/book.astro";
 import { technologies } from "@/services/technologies";
-import BentoGridItem from "./new/bento-grid-item.astro";
-import BentoGrid from "./new/bento-grid.astro";
-import BentoGridSubtitle from "./new/bento-grid-subtitle.astro";
+import BentoGridItem from "./bento-grid-item.astro";
+import BentoGrid from "./bento-grid.astro";
+import BentoGridSubtitle from "./bento-grid-subtitle.astro";
 import Rocket from "@/assets/icons/rocket.astro";
-import IconContainer from "./new/icon-container.astro";
+import IconContainer from "./icon-container.astro";
 ---
 
 <section class="mt-10" id="about-me">
@@ -24,6 +24,11 @@ import IconContainer from "./new/icon-container.astro";
         Desarrollador web, Mi objetivo es transformar <br /> ideas en interfaces
         intuitivas y atractivas que <br /> destaquen.
       </p>
+      <img
+        src="b4.svg"
+        alt="background"
+        class="absolute object-cover object-center bottom-0 right-0 -z-[1]"
+      />
     </BentoGridItem>
 
     <!-- content 2 -->
@@ -48,18 +53,8 @@ import IconContainer from "./new/icon-container.astro";
       </div>
     </BentoGridItem>
     <!-- content 3 -->
-    <BentoGridItem class="md:col-span-2 md:row-span-1 relative">
+    <BentoGridItem class="md:col-span-2 md:row-span-1">
       nose que poner
-      <img
-        src="b4.svg"
-        alt="bg"
-        class="absolute right-0 bottom-0 object-cover object-center -z-[1]"
-      />
-      <img
-        src="grid.svg"
-        alt="grid"
-        class="absolute object-cover object-center bottom-0 left-0 -z-[1]"
-      />
     </BentoGridItem>
     <!-- content 4 -->
     <BentoGridItem
