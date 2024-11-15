@@ -1,0 +1,66 @@
+---
+import Translate from "@/assets/icons/translate.astro";
+
+interface Language {
+  code: string;
+  name: string;
+}
+
+const languages: Language[] = [
+  { code: "es", name: "Español" },
+  { code: "en", name: "English" },
+];
+---
+
+<section class="relative">
+  <button
+    type="button"
+    id="dropdown-button"
+    data-dropdown-toggle="dropdown"
+    class="hover:text-emerald-300 transition-all pt-[5px] hover:scale-125"
+  >
+    <Translate />
+  </button>
+  <ul
+    id="dropdown"
+    class="absolute hidden z-10 bg-background rounded-xl border border-white/5 shadow-md mt-4 p-1"
+  >
+    {
+      languages.map((lang) => (
+        <li
+          class="px-4 py-2 hover:bg-white/5 cursor-pointer rounded-md "
+          id="dropdown-item"
+          onclick="handleLanguageChange('es')"
+          value={lang.code}
+        >
+          {lang.name}
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<script is:inline>
+  const options = document.querySelectorAll("#dropdown-item");
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      let selectedLanguage = option;
+      console.log(selectedLanguage);
+    });
+  });
+
+  const closeDropdown = () => {
+    document.getElementById("dropdown")?.classList.add("hidden");
+  };
+  /*   let selectedLanguage = "";
+   */ const handleLanguageChange = (lang) => {
+    closeDropdown();
+    console.log(lang);
+  };
+  // open and close dropdown
+  const dropdownButton = document.getElementById("dropdown-button");
+
+  dropdownButton?.addEventListener("click", () => {
+    document.getElementById("dropdown")?.classList.toggle("hidden");
+  });
+</script>

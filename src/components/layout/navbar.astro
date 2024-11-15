@@ -1,0 +1,87 @@
+---
+import Translate from "@/assets/icons/translate.astro";
+import LenguajeDropdown from "../lenguaje-dropdown.astro";
+
+const links = [
+  { name: "Proyectos", href: "#projects" },
+  { name: "Tecnologias", href: "#technologies" },
+  { name: "Sobre mi", href: "#about-me" },
+];
+---
+
+<header class="fixed inset-x-0 top-2 flex justify-center z-50">
+  <nav
+    class="py-2 px-3 md:px-7 rounded-3xl w-fit flex items-center gap-x-5 border border-transparent"
+  >
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class="md:text-lg hover:text-emerald-300 transition-all"
+        >
+          {link.name}
+        </a>
+      ))
+    }
+    <!-- <LenguajeDropdown /> -->
+  </nav>
+</header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 50px;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply bg-transparent shadow-none backdrop-blur-none;
+    }
+    to {
+      @apply bg-background shadow-lg backdrop-blur border border-white/5;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-blue-500");
+            } else {
+              item.classList.remove("text-blue-500");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
+</script>

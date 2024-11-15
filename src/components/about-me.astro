@@ -1,0 +1,98 @@
+---
+import User from "@/assets/icons/user.astro";
+import Coffe from "@/assets/icons/coffe.astro";
+import Book from "@/assets/icons/book.astro";
+import { technologies } from "@/services/technologies";
+import BentoGridItem from "./new/bento-grid-item.astro";
+import BentoGrid from "./new/bento-grid.astro";
+import BentoGridSubtitle from "./new/bento-grid-subtitle.astro";
+import Rocket from "@/assets/icons/rocket.astro";
+import IconContainer from "./new/icon-container.astro";
+---
+
+<section class="mt-10" id="about-me">
+  <BentoGrid>
+    <!-- content 1 -->
+    <BentoGridItem class="md:col-span-3 md:row-span-1 relative">
+      <BentoGridSubtitle color="sky">
+        <IconContainer class="bg-sky-300/10 text-sky-400">
+          <Coffe />
+        </IconContainer>
+        <h2>¿Quién Soy?</h2>
+      </BentoGridSubtitle>
+      <p class="p-3 text-pretty text-xl">
+        Desarrollador web, Mi objetivo es transformar <br /> ideas en interfaces
+        intuitivas y atractivas que <br /> destaquen.
+      </p>
+    </BentoGridItem>
+
+    <!-- content 2 -->
+    <BentoGridItem class="md:row-span-1 md:col-span-2 md:col-start-4">
+      <BentoGridSubtitle color="emerald">
+        <IconContainer class="bg-emerald-300/10 text-emerald-400">
+          <Book />
+        </IconContainer>
+        <h2>Formacion</h2>
+      </BentoGridSubtitle>
+      <div class="mt-2">
+        <p class="font-semibold text-xl">Misión TIC 2022</p>
+        <p class="text-lg">mintic x Universidad autonoma de bucaramanga</p>
+        <p class="text-gray-400">Feb 2022 - Dic 2022</p>
+        <a
+          href="https://res.cloudinary.com/dnbdpnvz1/image/upload/f_auto,q_auto/v1/images_project/portafolio-images/pdf-portafolio/qxtriurb9o3nqb0iyni9"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-emerald-300 underline hover:text-emerald-400"
+          >ver certificado
+        </a>
+      </div>
+    </BentoGridItem>
+    <!-- content 3 -->
+    <BentoGridItem class="md:col-span-2 md:row-span-1 relative">
+      nose que poner
+      <img
+        src="b4.svg"
+        alt="bg"
+        class="absolute right-0 bottom-0 object-cover object-center -z-[1]"
+      />
+      <img
+        src="grid.svg"
+        alt="grid"
+        class="absolute object-cover object-center bottom-0 left-0 -z-[1]"
+      />
+    </BentoGridItem>
+    <!-- content 4 -->
+    <BentoGridItem
+      class="md:col-span-3 md:row-span-1 md:col-start-3 relative overflow-hidden"
+    >
+      <BentoGridSubtitle color="red">
+        <IconContainer class="bg-red-300/10 text-red-400">
+          <Rocket />
+        </IconContainer>
+        <h2>Tecnologias</h2>
+      </BentoGridSubtitle>
+      <div class="flex items-center gap-5 flex-wrap mt-2">
+        {
+          technologies.map((tech) => (
+            <div class="flex items-center gap-x-1 border border-white/5 rounded-full px-3 py-1">
+              <img src={tech.logo.src} alt={tech.name} width="25" height="25" />
+              <span>{tech.name} </span>
+            </div>
+          ))
+        }
+      </div>
+      <div
+        class="h-16 w-16 rounded-full bg-red-500 absolute bottom-2 right-10 blur-3xl -z[-1]"
+      >
+      </div>
+    </BentoGridItem>
+  </BentoGrid>
+</section>
+
+<!-- 
+¡Hola! Soy un desarrollador web de 20 años dedicado a crear experiencias digitales con un enfoque en la excelencia en UX/UI. Terminé el colegio en 2020 y participé en el diplomado Misión TIC 2022, un programa del Ministerio de Educación de Colombia diseñado para enseñar programación y desarrollo de software. Este programa comenzó en febrero de 2022 y concluyó en diciembre del mismo año.
+
+Desde entonces, he continuado aprendiendo y perfeccionando mis habilidades en desarrollo web, familiarizándome con tecnologías como Next.js, React, TypeScript, y Tailwind CSS, entre otras. Aunque todavía no he conseguido mi primer trabajo profesional, he dedicado tiempo a proyectos personales que me han permitido ganar experiencia práctica y mejorar mis competencias.
+
+Estoy entusiasmado por seguir creciendo en el campo del desarrollo web y contribuir con mis habilidades a proyectos innovadores y desafiantes.
+-->
