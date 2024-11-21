@@ -22,16 +22,16 @@ export const technologies: Technologies[] = [
     logo: NextjsLogo,
   },
   {
+    name: 'Nest js',
+    logo: NestjsLogo,
+  },
+  {
     name: "Tailwind css",
     logo: TailwindLogo
   },
   {
     name: 'Typescript',
     logo: TypescriptLogo,
-  },
-  {
-    name: 'Nest js',
-    logo: NestjsLogo,
   },
   {
     name: "Astro js",
@@ -43,31 +43,18 @@ export const technologies: Technologies[] = [
   },
 
 
-  {
-    name: 'Node js',
-    logo: NodejsLogo,
-  },
-  {
-    name: 'Git',
-    logo: GitLogo,
-  },
-  /*  
-  {
-     name: 'Javascript',
-     logo: JavascriptLogo,
-   },
-   {
-     name: 'Css',
-     logo: CssLogo,
-   },
-   {
-     name: 'Html',
-     logo: HtmlLogo,
-   },
- 
-   {
-     name: 'Mongo DB',
-     logo: MongodbLogo,
-   },
- */
+  /*   {
+      name: 'Node js',
+      logo: NodejsLogo,
+    },
+    {
+      name: 'Git',
+      logo: GitLogo,
+    },
+  
+    {
+      name: 'Javascript',
+      logo: JavascriptLogo,
+    }, */
+
 ]

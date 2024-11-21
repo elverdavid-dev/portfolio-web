@@ -1,0 +1,138 @@
+---
+import Book from "@/assets/icons/book.astro";
+import Copy from "@/assets/icons/copy.astro";
+import { technologies } from "@/services/technologies";
+---
+
+<section
+  id="new-about-me"
+  class="grid gap-y-4 md:gap-5 h-full md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-auto mt-36"
+>
+  <section class="md:col-span-1 md:row-span-3">
+    <div class="grid-container">
+      <img
+        src="grid1.png"
+        alt="grid-1"
+        class="w-full sm:h-[276px] h-fit object-contain"
+      />
+
+      <div>
+        <p class="grid-headtext">Sobre mi</p>
+        <p class="grid-subtext">
+          Desarrollador web dedicado a crear experiencias digitales
+          significativas.
+        </p>
+        <br />
+        <p class="grid-subtext">
+          Combino mis habilidades en frontend y backend para construir
+          soluciones web robustas y mantenibles que realmente conecten con los
+          usuarios finales.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- grid 2 -->
+  <section class="md:col-span-1 md:row-span-2">
+    <div class="grid-container">
+      <img src="technologies.webp" alt="" />
+      <h2 class="grid-headtext">Tecnologias</h2>
+      <div class="flex items-center gap-3 flex-wrap">
+        {
+          technologies.map((tech) => (
+            <div class="flex items-center gap-x-1 border border-white/5 rounded-full px-3 py-1">
+              <img src={tech.logo.src} alt={tech.name} width="25" height="25" />
+              <span>{tech.name} </span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- grid 3 -->
+  <section class="col-span-1 xl:row-span-2">
+    <div class="grid-container">
+      <img
+        src="student.webp"
+        alt=""
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="">
+        <h2 class="grid-headtext">Formación</h2>
+        <p class="font-medium">Misión TIC 2022</p>
+        <p class="grid-subtext">mintic x Universidad autonoma de bucaramanga</p>
+        <p class="text-gray-400">Feb 2022 - Dic 2022</p>
+        <a
+          href="https://res.cloudinary.com/dnbdpnvz1/image/upload/f_auto,q_auto/v1/images_project/portafolio-images/pdf-portafolio/qxtriurb9o3nqb0iyni9"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gradient border-b border-emerald-300"
+          >ver certificado
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- grid 4 -->
+  <!--   <section class="col-span-1">
+    <div class="grid-container">
+      <h2 class="grid-headtext">Intereses</h2>
+      <p class="grid-subtext">
+        Apasionado por las nuevas tecnologías web y la creación de interfaces
+        que transforman ideas en experiencias memorables.
+      </p>
+    </div>
+  </section> -->
+  <section class="col-start-1 row-start-4">
+    <div class="grid-container">
+      <img
+        src="grid4.png"
+        alt="grid-4"
+        class="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+      />
+      <div class="space-y-2">
+        <p class="grid-subtext text-center">Contactame</p>
+        <div
+          id="copy-email"
+          class="cursor-pointer flex justify-center items-center gap-2 active:scale-95 transition-all"
+        >
+          <span id="icon-container">
+            <Copy />
+          </span>
+          <p
+            class="lg:text-2xl text-xl font-medium text-gray_gradient text-white"
+          >
+            elverdavid0839@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="md:col-span-2 md:row-span-2">
+    <div class="grid-container">
+      <img
+        src="grid3.png"
+        alt="grid image"
+        class="w-full sm:h-[276px] h-fit object-contain"
+      />
+      <div>
+        <h2 class="grid-headtext">Mi enfoque</h2>
+        <p class="grid-subtext">
+          <!--  Cada proyecto comienza con una arquitectura de código bien
+          planificada, asegurando que sea mantenible y escalable. Mi objetivo es
+          crear experiencias que no solo se vean bien, sino que sean intuitivas
+          y efectivas para el usuario final. -->
+          Construyo código limpio y mantenible, creando experiencias web que son
+          tan efectivas como intuitivas para el usuario final.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script is:inline>
+    const copyEmail = document.getElementById("copy-email");
+    copyEmail?.addEventListener("click", () => {
+      navigator.clipboard.writeText("elverdavid0839@gmail.com");
+    });
+  </script>
+</section>
