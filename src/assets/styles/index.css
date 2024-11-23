@@ -1,0 +1,20 @@
+/* Hero section */
+
+
+
+.grid-headtext {
+  @apply text-xl font-semibold mb-2 text-white;
+}
+
+.grid-subtext {
+  @apply text-gray-400 text-lg text-pretty;
+}
+
+/* gradients */
+.text-gradient {
+  @apply bg-gradient-to-r from-emerald-400 to-sky-300 bg-clip-text text-transparent
+}
+
+.bg-gradient-green {
+  @apply bg-gradient-to-r from-emerald-400 to-sky-300
+}

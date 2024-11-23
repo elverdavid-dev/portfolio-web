@@ -1,0 +1,114 @@
+---
+import Copy from "@/assets/icons/copy.astro";
+import { technologies } from "@/services/technologies";
+import BentoGrid from "@/components/about-me/bento-grid.astro";
+import BentoGridItem from "@/components/about-me/bento-grid-item.astro";
+---
+
+<BentoGrid class="mt-36">
+  <!-- about me -->
+  <BentoGridItem class="md:col-span-1 md:row-span-3">
+    <img
+      src="grid1.png"
+      alt="about me image"
+      class="w-full sm:h-[276px] h-fit object-contain"
+    />
+
+    <p class="grid-headtext">Sobre mi</p>
+    <p class="grid-subtext">
+      Desarrollador web dedicado a crear experiencias digitales significativas.
+    </p>
+    <br />
+    <p class="grid-subtext">
+      Combino mis habilidades en frontend y backend para construir soluciones
+      web robustas y mantenibles que realmente conecten con los usuarios
+      finales.
+    </p>
+  </BentoGridItem>
+
+  <!-- technologies -->
+
+  <BentoGridItem class="md:col-span-1 md:row-span-2">
+    <img src="technologies.webp" alt="technologies image" />
+    <h2 class="grid-headtext">Tecnologias</h2>
+    <div class="flex items-center gap-3 flex-wrap">
+      {
+        technologies.map((tech) => (
+          <div class="flex items-center gap-x-1 border border-white/5 rounded-full px-3 py-1">
+            <img src={tech.logo.src} alt={tech.name} width="25" height="25" />
+            <span>{tech.name} </span>
+          </div>
+        ))
+      }
+    </div>
+  </BentoGridItem>
+
+  <!-- Formation -->
+  <BentoGridItem class="col-span-1 xl:row-span-2">
+    <img
+      src="student.webp"
+      alt="formation image"
+      class="w-full h-full object-cover object-center"
+    />
+    <div>
+      <h2 class="grid-headtext">Formación</h2>
+      <p class="font-medium">Misión TIC 2022</p>
+      <p class="grid-subtext">mintic x Universidad autonoma de bucaramanga</p>
+      <p class="text-gray-400">Feb 2022 - Dic 2022</p>
+      <a
+        href="https://res.cloudinary.com/dnbdpnvz1/image/upload/f_auto,q_auto/v1/images_project/portafolio-images/pdf-portafolio/qxtriurb9o3nqb0iyni9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gradient border-b border-emerald-300"
+        >ver certificado
+      </a>
+    </div>
+  </BentoGridItem>
+
+  <!-- contact me -->
+  <BentoGridItem class="col-start-1 row-start-4">
+    <img
+      src="grid4.png"
+      alt="contact me image"
+      class="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+    />
+    <div class="space-y-2">
+      <p class="grid-subtext text-center">Contactame</p>
+      <div
+        id="copy-email"
+        class="cursor-pointer flex justify-center items-center gap-2 active:scale-95 transition-all"
+      >
+        <span>
+          <Copy />
+        </span>
+        <p
+          class="lg:text-2xl text-xl font-medium text-gray_gradient text-white"
+        >
+          elverdavid0839@gmail.com
+        </p>
+      </div>
+    </div>
+  </BentoGridItem>
+
+  <!-- My objectives -->
+
+  <BentoGridItem class="md:col-span-2 md:row-span-2">
+    <img
+      src="grid3.png"
+      alt="objectives image"
+      class="w-full sm:h-[276px] h-fit object-contain"
+    />
+    <h2 class="grid-headtext">Mis objetivos</h2>
+    <p class="grid-subtext">
+      Mis objetivos incluyen seguir expandiendo mis habilidades y contribuir a
+      proyectos que tengan un impacto significativo en el mundo digital.
+    </p>
+  </BentoGridItem>
+</BentoGrid>
+
+<script is:inline>
+  const copyEmail = document.getElementById("copy-email");
+  copyEmail?.addEventListener("click", () => {
+    navigator.clipboard.writeText("elverdavid0839@gmail.com");
+  });
+</script>

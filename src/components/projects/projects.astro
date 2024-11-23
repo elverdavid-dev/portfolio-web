@@ -1,0 +1,53 @@
+---
+import Code from "@/assets/icons/code.astro";
+import Github from "@/assets/icons/github.astro";
+import Link from "@/assets/icons/link.astro";
+import Subtitle from "@/components/common/subtitle.astro";
+import { ProjectData } from "@/services/projects";
+import Tags from "@/components/projects/tags.astro";
+import LinkButton from "./link-button.astro";
+---
+
+<section class="mt-36" id="projects">
+  <Subtitle>
+    <Code />
+    Ultimos Proyectos
+  </Subtitle>
+
+  <div class="mt-10 space-y-20">
+    {
+      ProjectData.map((project) => (
+        <article class="flex flex-col md:flex-row gap-8">
+          <img
+            alt={project.name}
+            loading="lazy"
+            src={project.urlImage}
+            width="600"
+            class="rounded-3xl"
+          />
+
+          <div class="w-full">
+            <h3 class="text-2xl font-bold">{project.name}</h3>
+
+            <p class="py-2 text-xl text-gray-400">{project.description}</p>
+            <Tags stack={project.stack ?? []} />
+            <footer class="flex items-end justify-start mt-4 gap-x-2">
+              {project.urlGithub && (
+                <LinkButton href={project.urlGithub}>
+                  <Github class="size-4" />
+                  Ver Codigo
+                </LinkButton>
+              )}
+              {project.urlWeb && (
+                <LinkButton href={project.urlWeb} bordered>
+                  <Link class="size-4" />
+                  Ver Pagina
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

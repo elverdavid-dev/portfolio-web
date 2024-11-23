@@ -1,0 +1,33 @@
+---
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  stack: {
+    name: string;
+    icon: ImageMetadata;
+  }[];
+}
+
+const { stack } = Astro.props;
+---
+
+<div class="flex items-center">
+  {
+    stack?.map((tag, i) => (
+      <div
+        class="border border-white/10 rounded-full bg-background lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+        style={{
+          transform: `translateX(-${5 * i + 2}px)`,
+        }}
+      >
+        <img
+          src={tag.icon.src}
+          alt={tag.name}
+          class="p-2"
+          width="35"
+          height="35"
+        />
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,71 @@
+---
+import Github from "@/assets/icons/github.astro";
+import Linkedin from "@/assets/icons/linkedin.astro";
+import Button from "@/components/common/button.astro";
+import MailSend from "@/assets/icons/mail-send.astro";
+import X from "@/assets/icons/x.astro";
+---
+
+<footer class="relative mt-40">
+  <div class="max-w-3xl mx-auto mt-10">
+    <h2 class="text-4xl md:text-5xl font-bold text-center">
+      listo para llevar su <strong class="text-gradient"
+        >presencia digital</strong
+      > al siguiente nivel
+    </h2>
+    <h3 class="mt-4 text-xl md:text-2xl text-center">
+      Comuníquese conmigo hoy y analicemos cómo puedo ayudarlo a alcanzar sus
+      objetivos.
+    </h3>
+    <div class="mt-10 mx-auto w-fit">
+      <Button href="mailto:elverdavid0839@gmail.com">
+        <MailSend />
+        <span>Contáctame</span>
+      </Button>
+    </div>
+  </div>
+  <img
+    src="footer-grid.svg"
+    alt="grid footer image"
+    height="100"
+    class="absolute bottom-3 opacity-50 left-0 -z-10 h-72 w-full object-cover object-center"
+  />
+
+  <section
+    class="py-5 mt-20 px-2 mx-auto flex flex-col items-center justify-between gap-y-2 md:px-0 md:max-w-6xl md:flex-row md:gap-y-0"
+  >
+    <p class="text-lg text-gray-400 order-2 md:order-1">
+      &copy; {new Date().getFullYear()} Todos los derechos reservados.
+    </p>
+    <!-- socials links -->
+    <div class="flex items-center gap-x-2 justify-center order-1 md:order-2">
+      <a
+        href="https://www.linkedin.com/in/elverdavid-dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 bg-white/5 rounded-full active:scale-95 transition-all"
+      >
+        <Linkedin />
+        <span class="sr-only">linkedin link</span>
+      </a>
+      <a
+        href="https://github.com/elverdavid-dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 bg-white/5 rounded-full active:scale-95 transition-all"
+      >
+        <Github />
+        <span class="sr-only">github link</span>
+      </a>
+      <a
+        href="https://x.com/elverdavid_dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 bg-white/5 rounded-full active:scale-95 transition-all"
+      >
+        <X />
+        <span class="sr-only">twitter link</span>
+      </a>
+    </div>
+  </section>
+</footer>

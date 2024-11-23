@@ -1,0 +1,26 @@
+---
+import Download from "@/assets/icons/download.astro";
+import Button from "@/components/common/button.astro";
+---
+
+<section class="my-32 md:max-w-3xl mx-auto motion-preset-slide-up">
+  <p class="uppercase tracking-widest text-sm text-center pb-5 text-blue-100">
+    ✨ Disponible para trabajar
+  </p>
+
+  <h1 class="text-4xl md:text-6xl text-center font-bold">
+    Transformo Conceptos en <span class="text-gradient"
+      >experiencias de usuario</span
+    > que destacan
+  </h1>
+  <p class="text-center md:tracking-wider mb-4 text-xl mt-5 md:text-2xl">
+    Hola! Soy Elver David, desarrollador web con 2 años de experiencia.
+  </p>
+
+  <div class="flex items-center justify-center flex-wrap gap-5 mt-10">
+    <Button bordered href="elver-david-CV.pdf" download="elver-david-CV">
+      <Download />
+      Descargar CV
+    </Button>
+  </div>
+</section>
