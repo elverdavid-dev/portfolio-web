@@ -1,25 +1,16 @@
 ---
-import Navbar from "@/components/layout/navbar.astro";
+//import Navbar from "@/components/layout/navbar.astro";
 import Footer from "@/components/layout/footer.astro";
 import "@fontsource-variable/bricolage-grotesque";
 import "@/assets/styles/index.css";
+import Head from "@/layouts/Head.astro";
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>
-			Portafolio de Elver David Peñate | Desarrollador web con 2 años de
-			experiencia
-		</title>
-	</head>
+	<Head />
 	<body class="2xl:container 2xl:mx-auto">
-		<Navbar />
+		<!-- <Navbar /> -->
 		<slot />
 		<Footer />
 	</body>

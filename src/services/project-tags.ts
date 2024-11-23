@@ -1,9 +1,9 @@
-import astroIcon from '@/assets/icons/logos/astro.svg'
-import mongodbIcon from '@/assets/icons/logos/mongodb.svg'
-import nestIcon from '@/assets/icons/logos/nestjs.svg'
-import nextIcon from '@/assets/icons/logos/next.svg'
-import tailwindIcon from '@/assets/icons/logos/tailwind.svg'
-import typescriptIcon from '@/assets/icons/logos/typescript.svg'
+import astroIcon from '@/assets/logos/astro.svg'
+import mongodbIcon from '@/assets/logos/mongodb.svg'
+import nestIcon from '@/assets/logos/nestjs.svg'
+import nextIcon from '@/assets/logos/next.svg'
+import tailwindIcon from '@/assets/logos/tailwind.svg'
+import typescriptIcon from '@/assets/logos/typescript.svg'
 
 export const productTags = {
   next: {

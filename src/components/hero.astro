@@ -1,7 +1,6 @@
 ---
-import MailSend from "@/assets/icons/mail-send.astro";
 import Download from "@/assets/icons/download.astro";
-import HeroLinks from "./hero-links.astro";
+import Button from "@/components/common/button.astro";
 ---
 
 <section class="my-32 md:max-w-3xl mx-auto motion-preset-slide-up">
@@ -19,9 +18,9 @@ import HeroLinks from "./hero-links.astro";
   </p>
 
   <div class="flex items-center justify-center flex-wrap gap-5 mt-10">
-    <HeroLinks bordered href="elver-david-CV.pdf" download="elver-david-CV">
+    <Button bordered href="elver-david-CV.pdf" download="elver-david-CV">
       <Download />
       Descargar CV
-    </HeroLinks>
+    </Button>
   </div>
 </section>

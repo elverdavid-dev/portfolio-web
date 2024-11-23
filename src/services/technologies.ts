@@ -1,16 +1,11 @@
 import type { ImageMetadata } from "astro"
-import NextjsLogo from '@/assets/icons/logos/next.svg'
-import AstrojsLogo from '@/assets/icons/logos/astro.svg'
-import ReactjsLogo from '@/assets/icons/logos/react.svg'
-import TailwindLogo from '@/assets/icons/logos/tailwind.svg'
-import TypescriptLogo from '@/assets/icons/logos/typescript.svg'
-import NestjsLogo from '@/assets/icons/logos/nestjs.svg'
-import NodejsLogo from '@/assets/icons/logos/node.svg'
-import JavascriptLogo from '@/assets/icons/logos/js.svg'
-import CssLogo from '@/assets/icons/logos/css.svg'
-import HtmlLogo from '@/assets/icons/logos/html.svg'
-import MongodbLogo from '@/assets/icons/logos/mongodb.svg'
-import GitLogo from '@/assets/icons/logos/git.svg'
+import NextjsLogo from '@/assets/logos/next.svg'
+import AstrojsLogo from '@/assets/logos/astro.svg'
+import ReactjsLogo from '@/assets/logos/react.svg'
+import TailwindLogo from '@/assets/logos/tailwind.svg'
+import TypescriptLogo from '@/assets/logos/typescript.svg'
+import NestjsLogo from '@/assets/logos/nestjs.svg'
+
 interface Technologies {
   name: string
   logo: ImageMetadata
@@ -41,20 +36,4 @@ export const technologies: Technologies[] = [
     name: "React js",
     logo: ReactjsLogo
   },
-
-
-  /*   {
-      name: 'Node js',
-      logo: NodejsLogo,
-    },
-    {
-      name: 'Git',
-      logo: GitLogo,
-    },
-  
-    {
-      name: 'Javascript',
-      logo: JavascriptLogo,
-    }, */
-
 ]

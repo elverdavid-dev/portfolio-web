@@ -1,7 +1,7 @@
 ---
 import Github from "@/assets/icons/github.astro";
 import Linkedin from "@/assets/icons/linkedin.astro";
-import HeroLinks from "../hero/hero-links.astro";
+import Button from "@/components/common/button.astro";
 import MailSend from "@/assets/icons/mail-send.astro";
 import X from "@/assets/icons/x.astro";
 ---
@@ -18,15 +18,15 @@ import X from "@/assets/icons/x.astro";
       objetivos.
     </h3>
     <div class="mt-10 mx-auto w-fit">
-      <HeroLinks href="mailto:elverdavid0839@gmail.com">
+      <Button href="mailto:elverdavid0839@gmail.com">
         <MailSend />
         <span>Contáctame</span>
-      </HeroLinks>
+      </Button>
     </div>
   </div>
   <img
     src="footer-grid.svg"
-    alt=""
+    alt="grid footer image"
     height="100"
     class="absolute bottom-3 opacity-50 left-0 -z-10 h-72 w-full object-cover object-center"
   />
@@ -37,22 +37,25 @@ import X from "@/assets/icons/x.astro";
     <p class="text-lg text-gray-400 order-2 md:order-1">
       &copy; {new Date().getFullYear()} Todos los derechos reservados.
     </p>
+    <!-- socials links -->
     <div class="flex items-center gap-x-2 justify-center order-1 md:order-2">
       <a
-        href="http://"
+        href="https://www.linkedin.com/in/elverdavid-dev"
         target="_blank"
         rel="noopener noreferrer"
         class="p-2 bg-white/5 rounded-full active:scale-95 transition-all"
       >
         <Linkedin />
+        <span class="sr-only">linkedin link</span>
       </a>
       <a
-        href="http://"
+        href="https://github.com/elverdavid-dev/"
         target="_blank"
         rel="noopener noreferrer"
         class="p-2 bg-white/5 rounded-full active:scale-95 transition-all"
       >
         <Github />
+        <span class="sr-only">github link</span>
       </a>
       <a
         href="https://x.com/elverdavid_dev"
@@ -61,6 +64,7 @@ import X from "@/assets/icons/x.astro";
         class="p-2 bg-white/5 rounded-full active:scale-95 transition-all"
       >
         <X />
+        <span class="sr-only">twitter link</span>
       </a>
     </div>
   </section>

@@ -1,0 +1,72 @@
+---
+const title =
+  "Portafolio de Elver David Peñate | Desarrollador web con 2 años de experiencia";
+
+const description =
+  "Portafolio web de Elver David Peñate, desarrollador web especializado en React, Next.js, Tailwind CSS, y Node.js. Descubre mis proyectos y habilidades en desarrollo frontend y backend.";
+
+const base_url = "https://www.elvportafolio.website";
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <meta property="og:type" content="website" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <meta
+    name="keywords"
+    content="portafolio web, desarrollador web, elver david peñate"
+  />
+
+  <!-- title -->
+  <title>
+    {title}
+  </title>
+  <meta property="og:title" content={title} />
+  <meta property="twitter:title" content={title} />
+
+  <!-- description -->
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta property="twitter:description" content={description} />
+
+  <!-- images -->
+  <meta property="og:image" content=`${base_url}/og-image.png` />
+  <meta property="twitter:image" content=`${base_url}/og-image.png` />
+
+  <!-- url -->
+  <meta property="og:url" content={base_url} />
+  <meta property="twitter:url" content={base_url} />
+  <link rel="canonical" href={base_url} />
+</head>
+
+<!-- 
+  <head>
+    <meta charset="UTF-8" />
+
+   
+  
+
+   
+   
+  
+
+   
+
+  
+    <meta property="og:type" content="website" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta
+      name="keywords"
+      content="Desarrollador Web, React, Next.js, Tailwind CSS, Node.js, Nest.js, Frontend, Backend, Portfolio, Proyectos Web, HTML, CSS, JavaScript, Programación, Desarrollo de Software, Autodidacta"
+    />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+-->

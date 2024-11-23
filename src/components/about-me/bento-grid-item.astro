@@ -4,10 +4,14 @@ import { cn } from "@/lib/utils";
 interface Props {
   class?: string;
 }
-
 const props = Astro.props;
 ---
 
-<section class={cn("border-2 border-white/5 rounded-3xl p-5", props.class)}>
+<section
+  class={cn(
+    "w-full h-full border border-white/5 bg-black/20 rounded-2xl sm:p-7 p-4 flex flex-col gap-5",
+    props.class,
+  )}
+>
   <slot />
 </section>
