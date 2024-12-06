@@ -3,34 +3,54 @@ import Copy from "@/assets/icons/copy.astro";
 import { technologies } from "@/services/technologies";
 import BentoGrid from "@/components/about-me/bento-grid.astro";
 import BentoGridItem from "@/components/about-me/bento-grid-item.astro";
+import { Image } from "astro:assets";
+
+// Images
+import aboutMeImage from "@/assets/images/about-me.png";
+import technologiesImage from "@/assets/images/technologies.webp";
+import formationImage from "@/assets/images/formation.webp";
+import contactMeImage from "@/assets/images/contact-me.png";
+import myFocusImage from "@/assets/images/my-focus.webp";
 ---
 
 <BentoGrid class="mt-36">
   <!-- about me -->
   <BentoGridItem class="md:col-span-1 md:row-span-3">
-    <img
-      src="grid1.png"
-      alt="about me image"
+    <Image
+      src={aboutMeImage}
+      alt="abaut me grid image"
+      width="355"
+      height="276"
       class="w-full sm:h-[276px] h-fit object-contain"
     />
 
-    <p class="grid-headtext">Sobre mi</p>
-    <p class="grid-subtext">
-      Desarrollador web dedicado a crear experiencias digitales significativas.
-    </p>
-    <br />
-    <p class="grid-subtext">
-      Combino mis habilidades en frontend y backend para construir soluciones
-      web robustas y mantenibles que realmente conecten con los usuarios
-      finales.
-    </p>
+    <h3 class="grid-headtext">Sobre mi</h3>
+    <section class="grid-subtext">
+      <p>
+        Desarrollador web con un enfoque en crear soluciones digitales que no
+        solo funcionan, sino que también ofrecen una experiencia de usuario
+        excepcional.
+      </p>
+      <br />
+      <p>
+        Me especializo en el desarrollo tanto de frontend como de backend,
+        utilizando tecnologías modernas para garantizar aplicaciones robustas y
+        escalables.
+      </p>
+    </section>
   </BentoGridItem>
 
   <!-- technologies -->
 
   <BentoGridItem class="md:col-span-1 md:row-span-2">
-    <img src="technologies.webp" alt="technologies image" />
-    <h2 class="grid-headtext">Tecnologias</h2>
+    <Image
+      src={technologiesImage}
+      alt="technologies grid image"
+      width="355"
+      height="276"
+      class="w-full sm:h-[276px] h-fit object-contain"
+    />
+    <h3 class="grid-headtext">Tecnologias</h3>
     <div class="flex items-center gap-3 flex-wrap">
       {
         technologies.map((tech) => (
@@ -45,35 +65,39 @@ import BentoGridItem from "@/components/about-me/bento-grid-item.astro";
 
   <!-- Formation -->
   <BentoGridItem class="col-span-1 xl:row-span-2">
-    <img
-      src="student.webp"
-      alt="formation image"
-      class="w-full h-full object-cover object-center"
+    <Image
+      src={formationImage}
+      alt="formation grid image"
+      width="355"
+      height="276"
+      class="w-full sm:h-[276px] h-fit object-contain"
     />
     <div>
-      <h2 class="grid-headtext">Formación</h2>
-      <p class="font-medium">Misión TIC 2022</p>
+      <h3 class="grid-headtext">Formación</h3>
+      <h4 class="font-medium">Misión TIC 2022</h4>
       <p class="grid-subtext">mintic x Universidad autonoma de bucaramanga</p>
       <p class="text-gray-400">Feb 2022 - Dic 2022</p>
       <a
         href="https://res.cloudinary.com/dnbdpnvz1/image/upload/f_auto,q_auto/v1/images_project/portafolio-images/pdf-portafolio/qxtriurb9o3nqb0iyni9"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-gradient border-b border-emerald-300"
+        class="text-emerald-300 border-b border-emerald-300"
         >ver certificado
       </a>
     </div>
   </BentoGridItem>
 
   <!-- contact me -->
-  <BentoGridItem class="col-start-1 row-start-4">
-    <img
-      src="grid4.png"
-      alt="contact me image"
-      class="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+  <BentoGridItem class="col-start-1 row-start-4 gap-y-2">
+    <Image
+      src={contactMeImage}
+      alt="contact me grid image"
+      width="355"
+      height="276"
+      class="w-full sm:h-[276px] h-fit object-contain"
     />
     <div class="space-y-2">
-      <p class="grid-subtext text-center">Contactame</p>
+      <h3 class="grid-subtext text-center">Contactame</h3>
       <div
         id="copy-email"
         class="cursor-pointer flex justify-center items-center gap-2 active:scale-95 transition-all"
@@ -90,18 +114,19 @@ import BentoGridItem from "@/components/about-me/bento-grid-item.astro";
     </div>
   </BentoGridItem>
 
-  <!-- My objectives -->
+  <!-- My Focus -->
 
   <BentoGridItem class="lg:col-span-2 lg:row-span-2">
-    <img
-      src="grid3.png"
+    <Image
+      src={myFocusImage}
       alt="objectives image"
       class="w-full sm:h-[276px] h-fit object-contain"
     />
-    <h2 class="grid-headtext">Mis objetivos</h2>
+    <h3 class="grid-headtext">Mi Enfoque</h3>
     <p class="grid-subtext">
-      Mis objetivos incluyen seguir expandiendo mis habilidades y contribuir a
-      proyectos que tengan un impacto significativo en el mundo digital.
+      Me enfoco en crear soluciones eficientes y sostenibles, adaptándome a las
+      necesidades de cada cliente y siempre buscando la mejor experiencia para
+      el usuario final.
     </p>
   </BentoGridItem>
 </BentoGrid>
