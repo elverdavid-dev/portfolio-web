@@ -30,7 +30,7 @@ export const ProjectData: ProjectInterface[] = [
     urlImage:
       `${image_base_url}/enhone6togoeczjwslsk`,
     urlGithub: 'https://github.com/ElverDavid07/Project_Recipe_Page',
-    urlWeb: 'https://www.globalfood.site',
+    urlWeb: 'https://project-recipe-page.vercel.app/',
     stack: [next, tailwind, typescript, nest],
   },
 

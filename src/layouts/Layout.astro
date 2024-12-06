@@ -3,14 +3,15 @@
 import Footer from "@/components/layout/footer.astro";
 import "@fontsource-variable/bricolage-grotesque";
 import "@/assets/styles/index.css";
-import Head from "@/layouts/Head.astro";
+import Headers from "@/layouts/Headers.astro";
+import Navbar from "@/components/layout/navbar.astro";
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
-	<Head />
+	<Headers />
 	<body class="2xl:container 2xl:mx-auto">
-		<!-- <Navbar /> -->
+		<Navbar />
 		<slot />
 		<Footer />
 	</body>

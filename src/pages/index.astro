@@ -3,20 +3,22 @@ import AboutMe from "@/components/about-me/about-me.astro";
 import Hero from "@/components/hero.astro";
 import Spotlight from "@/components/layout/spotlight.astro";
 import Projects from "@/components/projects/projects.astro";
+import Services from "@/components/services.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
 	<section
-		class="h-[40rem] w-full rounded-md antialiased bg-grid-white/[0.02] relative overflow-hidden px-3"
+		class="h-[40rem] w-full rounded-md antialiased bg-grid-white/[0.02] relative overflow-hidden mx-auto"
 	>
 		<Spotlight class="-top-40 left-0 md:left-40 md:-top-10" />
 		<Spotlight class="h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
 		<Hero />
 	</section>
 
-	<section class="px-3 mx-auto lg:px-0 md:max-w-6xl">
+	<section class="px-2 mx-auto lg:px-0 md:max-w-7xl">
 		<AboutMe />
 		<Projects />
+		<Services />
 	</section>
 </Layout>

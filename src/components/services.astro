@@ -1,8 +1,51 @@
 ---
 import Subtitle from "@/components/common/subtitle.astro";
+import Server from "@/assets/icons/server.astro";
+import Code from "@/assets/icons/code.astro";
+import Layout from "@/assets/icons/layout.astro";
+import { cn } from "@/lib/utils";
+
+const services = [
+  {
+    title: "Desarrollo Frontend",
+    description:
+      "Desarrollo de páginas web modernas y optimizadas para una excelente experiencia de usuario, utilizando tecnologías como React, Next.js y Tailwind css.",
+    url_image: "exp2.svg",
+  },
+  {
+    title: "Desarrollo Backend",
+    description:
+      "Creación de sistemas seguros, escalables y eficientes que gestionen datos y funcionalidades, implementados con Node.js y Nest.js.",
+    url_image: "exp1.svg",
+  },
+  {
+    title: "Desarrollo Full Stack",
+    description:
+      "Desarrollo completo de aplicaciones web, integrando frontend y backend para ofrecer soluciones integrales.",
+    url_image: "exp4.svg",
+  },
+  {
+    title: "Optimización SEO",
+    description:
+      "Mejora del posicionamiento de tu sitio web en los motores de búsqueda para atraer más visitas orgánicas y aumentar tu visibilidad en línea.",
+    url_image: "exp3.svg",
+  },
+];
 ---
 
-<Subtitle> Servicios </Subtitle>
-<section class="flex items-center gap-x-3">
-  <div>services</div>
+<section class="mt-36">
+  <Subtitle> Servicios </Subtitle>
+  <section class="grid md:grid-cols-2 gap-5 rounded-2xl mt-10">
+    {
+      services.map((service) => (
+        <article class="flex flex-col md:flex-row gap-8 border border-white/10 p-5 rounded-2xl bg-white/5">
+          <img src={service.url_image} alt={service.title} width="100" />
+          <div class="w-full">
+            <h3 class="text-xl font-bold">{service.title}</h3>
+            <p class="py-2 text-lg text-gray-400">{service.description}</p>
+          </div>
+        </article>
+      ))
+    }
+  </section>
 </section>

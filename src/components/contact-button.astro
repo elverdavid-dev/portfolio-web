@@ -1,0 +1,16 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {}
+
+const { ...props } = Astro.props;
+---
+
+<a
+  target="_blank"
+  rel="noopener noreferrer"
+  {...props}
+  class="py-2 px-2 bg-white/5 rounded-2xl border border-white/5 active:scale-95 transition-all flex items-center gap-x-1 justify-between text-lg hover:bg-white/10 group"
+>
+  <slot />
+</a>
