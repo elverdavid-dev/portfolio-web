@@ -11,4 +11,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   site: 'https://www.elvportafolio.website',
+  image: {
+    domains: [
+      'res.cloudinary.com'],
+    remotePatterns: [{
+      protocol: 'https',
+    }]
+  }
 });
