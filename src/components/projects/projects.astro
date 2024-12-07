@@ -5,7 +5,8 @@ import Link from "@/assets/icons/link.astro";
 import Subtitle from "@/components/common/subtitle.astro";
 import { ProjectData } from "@/services/projects";
 import Tags from "@/components/projects/tags.astro";
-import LinkButton from "./link-button.astro";
+import LinkButton from "@/components/projects/link-button.astro";
+import { Image } from "astro:assets";
 ---
 
 <section class="mt-36" id="projects">
@@ -18,11 +19,11 @@ import LinkButton from "./link-button.astro";
     {
       ProjectData.map((project) => (
         <article class="flex flex-col md:flex-row gap-8">
-          <img
-            alt={project.name}
-            loading="lazy"
+          <Image
             src={project.urlImage}
+            alt={`project ${project.name}`}
             width="600"
+            height="290"
             class="rounded-3xl md:w-[400px] md:h-[200px] lg:w-[600px] lg:h-auto object-cover object-center"
           />
 

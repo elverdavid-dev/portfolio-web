@@ -4,6 +4,8 @@ import Linkedin from "@/assets/icons/linkedin.astro";
 import Button from "@/components/common/button.astro";
 import MailSend from "@/assets/icons/mail-send.astro";
 import X from "@/assets/icons/x.astro";
+import { Image } from "astro:assets";
+import footerGridImage from "@/assets/images/footer-grid.svg";
 ---
 
 <footer class="relative mt-40 px-3 lg:px-0 md:max-w-6xl mx-auto">
@@ -24,9 +26,9 @@ import X from "@/assets/icons/x.astro";
       </Button>
     </div>
   </div>
-  <img
-    src="footer-grid.svg"
-    alt="grid footer image"
+  <Image
+    src={footerGridImage}
+    alt="grid footer background"
     height="100"
     class="absolute bottom-3 opacity-50 left-0 -z-10 h-72 w-full object-cover object-center"
   />

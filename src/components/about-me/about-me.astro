@@ -18,7 +18,7 @@ import myFocusImage from "@/assets/images/my-focus.webp";
   <BentoGridItem class="md:col-span-1 md:row-span-3">
     <Image
       src={aboutMeImage}
-      alt="abaut me grid image"
+      alt="abaut me grid"
       width="355"
       height="276"
       class="w-full sm:h-[276px] h-fit object-contain"
@@ -45,7 +45,7 @@ import myFocusImage from "@/assets/images/my-focus.webp";
   <BentoGridItem class="md:col-span-1 md:row-span-2">
     <Image
       src={technologiesImage}
-      alt="technologies grid image"
+      alt="technologies grid"
       width="355"
       height="276"
       class="w-full sm:h-[276px] h-fit object-contain"
@@ -55,7 +55,12 @@ import myFocusImage from "@/assets/images/my-focus.webp";
       {
         technologies.map((tech) => (
           <div class="flex items-center gap-x-1 border border-white/5 rounded-full px-3 py-1">
-            <img src={tech.logo.src} alt={tech.name} width="25" height="25" />
+            <Image
+              src={tech.logo}
+              alt={`logo ${tech.name}`}
+              width="25"
+              height="25"
+            />
             <span>{tech.name} </span>
           </div>
         ))
@@ -67,7 +72,7 @@ import myFocusImage from "@/assets/images/my-focus.webp";
   <BentoGridItem class="col-span-1 xl:row-span-2">
     <Image
       src={formationImage}
-      alt="formation grid image"
+      alt="formation grid"
       width="355"
       height="276"
       class="w-full sm:h-[276px] h-fit object-contain"
@@ -91,7 +96,7 @@ import myFocusImage from "@/assets/images/my-focus.webp";
   <BentoGridItem class="col-start-1 row-start-4 gap-y-2">
     <Image
       src={contactMeImage}
-      alt="contact me grid image"
+      alt="contact me grid"
       width="355"
       height="276"
       class="w-full sm:h-[276px] h-fit object-contain"
@@ -119,7 +124,7 @@ import myFocusImage from "@/assets/images/my-focus.webp";
   <BentoGridItem class="lg:col-span-2 lg:row-span-2">
     <Image
       src={myFocusImage}
-      alt="objectives image"
+      alt="objectives"
       class="w-full sm:h-[276px] h-fit object-contain"
     />
     <h3 class="grid-headtext">Mi Enfoque</h3>
