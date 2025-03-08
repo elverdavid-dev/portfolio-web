@@ -4,7 +4,7 @@ import nestIcon from '@/assets/logos/nestjs.svg'
 import nextIcon from '@/assets/logos/next.svg'
 import tailwindIcon from '@/assets/logos/tailwind.svg'
 import typescriptIcon from '@/assets/logos/typescript.svg'
-
+import supabase from '@/assets/logos/supabase.svg'
 export const productTags = {
   next: {
     name: 'Next.js',
@@ -30,4 +30,8 @@ export const productTags = {
     name: 'Nest.js',
     icon: nestIcon,
   },
+  supabase:{
+    name: 'Supabase',
+    icon: supabase
+  }
 }

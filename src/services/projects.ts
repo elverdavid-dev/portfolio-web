@@ -11,18 +11,9 @@ export interface ProjectInterface {
 const image_base_url = "https://res.cloudinary.com/dnbdpnvz1/image/upload/f_auto,q_auto/v1/images_project/portafolio-images"
 
 
-const { next, tailwind, typescript, nest } = productTags
+const { next, tailwind, typescript, nest,supabase } = productTags
 
 export const ProjectData: ProjectInterface[] = [
-  {
-    name: 'Gamma movies',
-    description:
-      'Explora películas populares, próximas, mejor valoradas y en cartelera. Funcionalidades de búsqueda, paginación, detalles de películas y autenticación.',
-    urlImage: `${image_base_url}/t9hzgeuzn2lvmeswvbxp`,
-    urlGithub: "https://github.com/elverdavid-dev/page-gamma-movies",
-    urlWeb: 'https://gamma-movies.vercel.app/',
-    stack: [next, tailwind, typescript],
-  },
   {
     name: 'GlobalFood',
     description:
@@ -33,6 +24,23 @@ export const ProjectData: ProjectInterface[] = [
     urlWeb: 'https://project-recipe-page.vercel.app/',
     stack: [next, tailwind, typescript, nest],
   },
+  {
+    name: 'Gamma movies',
+    description:
+      'Explora películas populares, próximas, mejor valoradas y en cartelera. Funcionalidades de búsqueda, paginación, detalles de películas y autenticación.',
+    urlImage: `${image_base_url}/t9hzgeuzn2lvmeswvbxp`,
+    urlGithub: "https://github.com/elverdavid-dev/page-gamma-movies",
+    urlWeb: 'https://gamma-movies.vercel.app/',
+    stack: [next, tailwind, typescript],
+  },
+  {
+    name: 'Generador de codigos qrs',
+    description:
+      'Genera un qr con informacion personalizada y lo descarga en formato png. este proyecto esta en desarrollo',
+    urlImage:`${image_base_url}/e17m2lbhuwfhvgiwcyov`,
+    urlWeb: 'https://technical-test-la-fabrica.vercel.app/',
+    stack: [next, tailwind,typescript,supabase],
+  }
 
 
 ]
